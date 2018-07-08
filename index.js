@@ -5,11 +5,8 @@ exports.init = function(node, app_config, main, host_info) {
 
 	var get_temperature_interval = function(node, sensor, sid) {
 		var sid
-		console.log("set Interval", sensor.file);
 		var t = setInterval(function() {
-			console.log("interval", sid);
 			sensor.getTemperatureAsync().then(function(temp){
-				console.log('Actual temp:', temp, 'C', sid);
 				node.publish(undefined, temp);
 			}).catch(function(err) {
 				throw err;
@@ -35,13 +32,11 @@ exports.init = function(node, app_config, main, host_info) {
 			metadata.unit = "C";
 			metadata.unit_long = "Celsius";
 			n.announce(metadata);
-			console.log("NODE", n.name, metadata);
 		}
 	);
 
 	W1Temp.getSensorsUids(app_config.master_number)
 			.then(function(sensorsUids) {
-		console.log(sensorsUids);
 
 		sensorsUids.forEach(function(sid) {
 			var n = map.node(sid);
