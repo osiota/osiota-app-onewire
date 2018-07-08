@@ -1,0 +1,11 @@
+{
+  "name": "er-app-w1temp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "",
+  "license": "",
+  "dependencies": {
+    "w1temp": "^4.1.0"
+  }
+}
