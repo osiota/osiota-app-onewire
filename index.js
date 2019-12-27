@@ -9,7 +9,9 @@ exports.init = function(node, app_config, main, host_info) {
 			sensor.getTemperatureAsync().then(function(temp){
 				node.publish(undefined, temp);
 			}).catch(function(err) {
-				throw err;
+				console.error("Error getTemperatureAsync",
+					err.stack || err
+				);
 			});
 		}, 5000);
 		timer.push(t);
@@ -25,7 +27,9 @@ exports.init = function(node, app_config, main, host_info) {
 
 				get_temperature_interval(n, sensor, sid);
 			}).catch(function(err) {
-				throw err;
+				console.error("Error getSensor",
+					err.stack || err
+				);
 			});
 
 			metadata.type = "temperature.data";
@@ -43,7 +47,9 @@ exports.init = function(node, app_config, main, host_info) {
 			if (!n) return;
 		});
 	}).catch(function(err) {
-		throw err;
+		console.error("Error getSensorUids",
+			err.stack || err
+		);
 	});
 	return [map, timer];
 }
