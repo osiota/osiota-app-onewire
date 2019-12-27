@@ -28,6 +28,7 @@ exports.init = function(node, app_config, main, host_info) {
 				get_temperature_interval(n, sensor, sid);
 			}).catch(function(err) {
 				console.error("Error getSensor",
+					sid,
 					err.stack || err
 				);
 			});
