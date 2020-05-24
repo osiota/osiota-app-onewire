@@ -33,14 +33,15 @@ exports.init = function(node, app_config, main, host_info) {
 				);
 			});
 
-			metadata.type = "temperature.data";
-			metadata.unit = "C";
-			metadata.unit_long = "Celsius";
-			n.announce(metadata);
+			n.announce([{
+				"type": "temperature.data",
+				"unit": "C",
+				"unit_long": "Celsius"
+			}, metadata]);
 		}
 	);
 
-	W1Temp.getSensorsUids(app_config.master_number)
+	W1Temp.getSensorsUids(app_config.bus_id)
 			.then(function(sensorsUids) {
 
 		sensorsUids.forEach(function(sid) {
