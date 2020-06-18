@@ -7,5 +7,9 @@
   "license": "MIT",
   "dependencies": {
     "w1temp": "^4.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/osiota/osiota-app-onewire.git"
   }
 }
