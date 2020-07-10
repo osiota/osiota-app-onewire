@@ -4,7 +4,6 @@ exports.init = function(node, app_config, main, host_info) {
 	var timer = [];
 
 	var get_temperature_interval = function(node, sensor, sid) {
-		var sid
 		var t = setInterval(function() {
 			sensor.getTemperatureAsync().then(function(temp){
 				node.publish(undefined, temp);
@@ -13,7 +12,7 @@ exports.init = function(node, app_config, main, host_info) {
 					err.stack || err
 				);
 			});
-		}, 5000);
+		}, (app_config.interval || 5) * 1000);
 		timer.push(t);
 	};
 
