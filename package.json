@@ -1,7 +1,7 @@
 {
   "name": "osiota-app-onewire",
   "version": "1.0.0",
-  "description": "This application collects temperature values (and other data) from One-Wire devices",
+  "description": "This application collects temperature values (and other data) from 1-Wire devices",
   "main": "index.js",
   "author": "Simon Walz and others",
   "license": "MIT",

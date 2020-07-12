@@ -2,7 +2,7 @@
 	"$schema": "http://json-schema.org/draft/2019-09/schema#",
 	"type": "object",
 	"title": "osiota application onewire",
-	"description": "This application collects temperature values (and other data) from One-Wire devices.",
+	"description": "This application collects temperature values (and other data) from 1-Wire devices.",
 	"properties": {
 		"map": {
 			"type": "array",
@@ -13,7 +13,7 @@
 				"properties": {
 					"map": {
 						"type": "string",
-						"description": "One-Wire device id"
+						"description": "1-Wire device id"
 					},
 					"node": {
 						"type": "string",
@@ -21,7 +21,7 @@
 					},
 					"metadata": {
 						"type": "object",
-						"description": "metadata for that device",
+						"description": "Metadata for that device",
 						"default": {
 							"type": "temperature.data",
 							"unit": "C",
@@ -45,7 +45,7 @@
 		},
 		"bus_id": {
 			"type": "number",
-			"description": "Bus number of the One-Wire port",
+			"description": "Bus number of the 1-Wire port",
 			"default": 1
 		}
 	}
