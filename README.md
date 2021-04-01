@@ -1,3 +1,11 @@
+<!--
+Auto generated documentation:
+  * Adapt schema.json and
+  * Run npm run doc
+
+Please edit schema.json or
+	https://github.com/simonwalz/osiota-dev/blob/master/partials/main.md
+-->
 <a name="root"></a>
 # osiota application onewire
 
@@ -12,7 +20,7 @@ This application collects temperature values (and other data) from 1-Wire device
 
 |Name|Description|Type|
 |----|-----------|----|
-|[map](#map[])|Device mapping<br/>|object\[\]|
+|[map](#map)|Device mapping<br/>|object\[\]|
 |bus\_id|Bus number of the 1-Wire port<br/><br/>Default: `1`|number|
 
 **Example**
@@ -34,7 +42,7 @@ This application collects temperature values (and other data) from 1-Wire device
 }
 ```
 
-<a name="map[]"></a>
+<a name="map"></a>
 ### map\[\]:
 
 Device mapping
@@ -51,7 +59,7 @@ Debug output text
 |----|-----------|----|
 |map|1-Wire device id<br/>|string|
 |node|Node name to publish data to<br/>|string|
-|[metadata](#map[].metadata)|Metadata for that device<br/><br/>Default: `{"type":"temperature.data","unit":"C","unit_long":"Celsius"}`|object|
+|[metadata](#mapmetadata)|Metadata for that device<br/><br/>Default: `{"type":"temperature.data","unit":"C","unit_long":"Celsius"}`|object|
 
 **Example**
 
@@ -69,7 +77,7 @@ Debug output text
 ]
 ```
 
-<a name="map[].metadata"></a>
+<a name="mapmetadata"></a>
 #### map\[\]\.metadata:
 
 Metadata for that device
