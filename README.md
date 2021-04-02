@@ -20,8 +20,8 @@ This application collects temperature values (and other data) from 1-Wire device
 
 |Name|Description|Type|
 |----|-----------|----|
-|[map](#map)|Device mapping<br/>|object\[\]|
-|bus\_id|Bus number of the 1-Wire port<br/><br/>Default: `1`|number|
+|[`map`](#map)|Device mapping<br/>|object\[\]|
+|`bus_id`|Bus number of the 1-Wire port<br/>Default: `1`<br/>|number|
 
 **Example**
 
@@ -57,9 +57,9 @@ Debug output text
 
 |Name|Description|Type|
 |----|-----------|----|
-|map|1-Wire device id<br/>|string|
-|node|Node name to publish data to<br/>|string|
-|[metadata](#mapmetadata)|Metadata for that device<br/><br/>Default: `{"type":"temperature.data","unit":"C","unit_long":"Celsius"}`|object|
+|`map`|1-Wire device id<br/>|string|
+|`node`|Node name to publish data to<br/>|string|
+|[`metadata`](#mapmetadata)|Metadata for that device<br/>Default: `{"type":"temperature.data","unit":"C","unit_long":"Celsius"}`<br/>|object|
 
 **Example**
 
