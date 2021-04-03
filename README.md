@@ -21,7 +21,7 @@ This application collects temperature values (and other data) from 1-Wire device
 |Name|Type|Description|Required|
 |----|----|-----------|--------|
 |[**map**](#map)<br/>(Device mappings)|`object[]`||no|
-|**bus_id**|`number`|Bus number of the 1-Wire port<br/>Default: `1`<br/>|no|
+|**bus\_id**|`number`|Bus number of the 1-Wire port<br/>Default: `1`<br/>|no|
 
 **Additional Properties:** not allowed<br/>
 **Example**
