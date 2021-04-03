@@ -18,11 +18,12 @@ This application collects temperature values (and other data) from 1-Wire device
 
 **Properties**
 
-|Name|Description|Type|
-|----|-----------|----|
-|[`map`](#map)|Device mapping<br/>|object\[\]|
-|`bus_id`|Bus number of the 1-Wire port<br/>Default: `1`<br/>|number|
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|[**map**](#map)<br/>(Device mappings)|`object[]`||no|
+|**bus_id**|`number`|Bus number of the 1-Wire port<br/>Default: `1`<br/>|no|
 
+**Additional Properties:** not allowed<br/>
 **Example**
 
 ```json
@@ -43,24 +44,19 @@ This application collects temperature values (and other data) from 1-Wire device
 ```
 
 <a name="map"></a>
-### map\[\]:
+### map\[\]: Device mappings
 
-Device mapping
-
-
-**Items**
-
-
-Debug output text
+**Items: Device mapping**
 
 **Item Properties**
 
-|Name|Description|Type|
-|----|-----------|----|
-|`map`|1-Wire device id<br/>|string|
-|`node`|Node name to publish data to<br/>|string|
-|[`metadata`](#mapmetadata)|Metadata for that device<br/>Default: `{"type":"temperature.data","unit":"C","unit_long":"Celsius"}`<br/>|object|
+|Name|Type|Description|Required|
+|----|----|-----------|--------|
+|**map**|`string`|1-Wire device id<br/>|yes|
+|**node**|`string`|Node name to publish data to<br/>|no|
+|[**metadata**](#mapmetadata)|`object`|Metadata for that device<br/>Default: `{"type":"temperature.data","unit":"C","unit_long":"Celsius"}`<br/>|no|
 
+**Item Additional Properties:** not allowed<br/>
 **Example**
 
 ```json
@@ -83,7 +79,7 @@ Debug output text
 Metadata for that device
 
 
-**Additional Properties:** `true`<br/>
+**Additional Properties:** allowed<br/>
 **Example**
 
 ```json

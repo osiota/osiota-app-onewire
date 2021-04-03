@@ -6,10 +6,10 @@
 	"properties": {
 		"map": {
 			"type": "array",
-			"description": "Device mapping",
+			"title": "Device mappings",
 			"items": {
 				"type": "object",
-				"description": "Debug output text",
+				"title": "Device mapping",
 				"properties": {
 					"map": {
 						"type": "string",
@@ -30,6 +30,8 @@
 						"additionalProperties": true
 					}
 				},
+				"additionalProperties": false,
+				"required": [ "map" ],
 				"examples": [
 					{
 						"map": "28-0123456789ab",
@@ -45,8 +47,11 @@
 		},
 		"bus_id": {
 			"type": "number",
+			"title": "Bus ID",
 			"description": "Bus number of the 1-Wire port",
 			"default": 1
 		}
-	}
+	},
+	"required": [],
+	"additionalProperties": false
 }
